@@ -1,0 +1,108 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* 스크롤 가능하도록 설정 */
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 컨테이너 */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Home 링크 */
+.home-link {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* 제목 */
+#title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+/* 인트로 텍스트 */
+.intro {
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 700px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* EXAMPLES 제목 */
+#examples-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+/* 예시 단어 스타일 */
+.examples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.example {
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-word {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bottom-word {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 마우스를 올리면 단어 전환 */
+.example:hover .top-word {
+    opacity: 0;
+}
+
+.example:hover .bottom-word {
+    opacity: 1;
+}
+
+/* 마우스 위치에 따른 배경색 및 글씨색 */
+body.light {
+    background: white;
+    color: black;
+}
+
+body.dark {
+    background: black;
+    color: white;
+}
+
+.home-link.light {
+    color: black;
+}
+
+.home-link.dark {
+    color: white;
+}
